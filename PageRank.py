@@ -24,4 +24,4 @@ def pagerank_with_query(M, query, pages, num_iterations=100, d=0.85):
         ranks = ranks * relevance_boost
         ranks /= ranks.sum()  # Normaliza para que a soma seja 1
     
-    return ranks
+    return (ranks*10) # Ajustando para que a normalização não fique tão baixa.
